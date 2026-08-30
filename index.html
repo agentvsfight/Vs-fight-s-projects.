@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ninja Profile Hub</title>
+  <style>
+    :root { --bg: #0d0f12; --card: #1a202c; --text: #e2e8f0; --accent: #60a5fa; }
+    .light-theme { --bg: #f8fafc; --card: #ffffff; --text: #0f172a; --accent: #2563eb; }
+    body { margin: 0; padding: 40px 20px; background: var(--bg); color: var(--text); font-family: sans-serif; transition: 0.3s; display: flex; flex-direction: column; align-items: center; }
+    .profile-card { background: var(--card); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 30px; width: 100%; max-width: 400px; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.3); }
+    .avatar { width: 90px; height: 90px; border-radius: 50%; border: 3px solid var(--accent); margin-bottom: 10px; }
+    h1 { margin: 10px 0 5px; font-size: 22px; }
+    p { margin-bottom: 25px; font-size: 14px; opacity: 0.8; }
+    .link-btn { display: block; background: var(--accent); color: #fff; text-decoration: none; padding: 12px; margin: 10px 0; border-radius: 8px; font-weight: bold; transition: transform 0.2s, opacity 0.2s; }
+    .link-btn:hover { transform: translateY(-2px); opacity: 0.9; }
+    .theme-toggle { margin-top: 15px; background: transparent; border: 1px solid var(--accent); color: var(--accent); padding: 8px 16px; border-radius: 20px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div class="profile-card">
+    <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Ninja" alt="Avatar" class="avatar">
+    <h1>Ninjas Reunited</h1>
+    <p>Official Gaming Community & Guild Hub</p>
+    
+    <a href="https://discord.com" target="_blank" class="link-btn">Join Discord Server</a>
+    <a href="#" class="link-btn">Guild Roster & Ranks</a>
+    <a href="#" class="link-btn">Tournaments & Events</a>
+    
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Light/Dark</button>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('light-theme');
+    }
+  </script>
+</body>
+</html>
